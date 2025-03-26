@@ -1,0 +1,186 @@
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container-fluid, .row {
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen-bg {
+    height: 400px;
+    width: 100%;
+    background-image: url('../img/imgfundo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Para deixar a navbar com fundo transparente */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.79) !important; /* Preto semi-transparente */
+}
+
+/* Para deixar os links brancos */
+.navbar .nav-link {
+    color: white !important;
+}
+
+/* Para ajustar a cor do dropdown */
+.navbar .dropdown-menu {
+    background-color: rgb(255, 255, 255);
+}
+.navbar .dropdown-item {
+    color: white !important;
+}
+/* Deixa o fundo branco */
+.dpcolors {
+    background-color: white !important;
+}
+
+/* Deixa a cor do texto preta */
+.dpcolors .dropdown-item {
+    color: black !important;
+}
+/* Remove o fundo azul ao clicar no item */
+.dpcolors .dropdown-item:focus, 
+.dpcolors .dropdown-item:active {
+    background-color: white !important; /* Mantém o fundo branco */
+    color: black !important; /* Mantém a cor do texto preta */
+}
+
+/* Remove o fundo azul ao passar o mouse (hover) */
+.dpcolors .dropdown-item:hover {
+    background-color: white !important; /* Mantém o fundo branco */
+    color: black !important; /* Mantém a cor do texto preta */
+}
+/* Remove padding do container */
+.pagamentos {
+    padding: 40px;
+   
+}
+.tiposflores{
+    padding: 40px;
+}
+.imgtamanhoicon{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+/* Estilo para as colunas com imagem */
+.col img {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem dentro da coluna */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adiciona borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor da imagem */
+    background-color: white; /* Fundo branco */
+    padding: 10px; /* Espaço interno ao redor da imagem */
+}
+
+/* Ajuste nas colunas para um espaçamento mais equilibrado */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Para garantir que as colunas pequenas (col-1) não fiquem com muita largura */
+.col-1 {
+    flex: 0 0 10%;
+}
+
+.col-2 {
+    flex: 0 0 15%; /* Ajuste a largura das colunas */
+}
+
+h4 {
+    margin-bottom: 30px;
+}
+.fundo {
+    width: 122px;
+    height: 110px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.5rem 1rem;
+
+    display: flex;
+    justify-content: center; /* Alinha a imagem horizontalmente */
+    align-items: center; /* Alinha a imagem verticalmente */
+}
+
+.imgtpflores {
+    width: 60px;
+    height: auto; /* Ajusta a altura proporcionalmente */
+}
+
+.fullscreen-opa {
+    position: relative; /* Para garantir que o pseudo-elemento fique atrás do conteúdo */
+    height: 400px;
+    width: 100%;
+    background-image: url(../img/imgfundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; /* Opacidade direta na imagem de fundo */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Cor da seta */
+    width: 40px; /* Largura da seta */
+    height: 40px; /* Altura da seta */
+    border-radius: 50%; /* Forma arredondada */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza as setas verticalmente */
+}
+
+.bg-image {
+    height: 135px; /* Altura definida conforme solicitado */
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    text-align: center;
+    position: relative;
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Imagem de fundo para cada linha */
+.bg-1 {
+    background-image: url('../img/imgfundo.jpg');
+}
+
+.bg-2 {
+    background-image: url('../img/imgfundo.jpg');
+}
+
+.bg-3 {
+    background-image: url('../img/imgfundo.jpg');
+}
+
+/* Overlay escurecido para melhorar a leitura */
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5);  */
+    z-index: 1;
+}
+
+/* Garante que o conteúdo fique acima do overlay */
+.bg-image .col {
+    position: relative;
+    z-index: 2;
+}
