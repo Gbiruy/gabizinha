@@ -1,8 +1,12 @@
+/* Ajustes para garantir que o conteúdo fique responsivo */
 body, html {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container-fluid, .row {
@@ -10,18 +14,18 @@ body, html {
     padding: 0;
 }
 
-.fullscreen-bg {
-    height: 400px;
-    width: 100%;
-    background-image: url('../img/imgfundo.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.navbar-brand {
+    color: white; /* Define o texto como branco */
 }
 
 /* Para deixar a navbar com fundo transparente */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.79) !important; /* Preto semi-transparente */
+    background-color: #661a2e !important; /* Preto semi-transparente */
+    padding: 10px;
+}
+
+.navbar-nav {
+    text-align: center; /* Centraliza o conteúdo no menu */
 }
 
 /* Para deixar os links brancos */
@@ -57,19 +61,49 @@ body, html {
     background-color: white !important; /* Mantém o fundo branco */
     color: black !important; /* Mantém a cor do texto preta */
 }
+
+/* Responsividade para imagens e colunas */
+.fullscreen-bg {
+    height: 400px;
+    width: 100%;
+    background-image: url('../img/imgfundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.text-box {
+    background: rgba(0, 0, 0, 0.26); /* Fundo escuro semi-transparente para destacar o texto */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-left: 10%;
+}
+
+
+
 /* Remove padding do container */
 .pagamentos {
     padding: 40px;
-   
+    background-color: #fff; /* Apenas para destacar a seção */
 }
-.tiposflores{
-    padding: 40px;
-}
-.imgtamanhoicon{
+
+/* Ajustes nos ícones para telas pequenas */
+.imgtamanhoicon {
     width: 60px;
     height: 60px;
-    margin: 10px;
+    margin-right: 10px;
 }
+
+
+.d-flex span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 /* Estilo para as colunas com imagem */
 .col img {
     display: block;
@@ -94,39 +128,57 @@ body, html {
     flex: 0 0 10%;
 }
 
+/* Ajustes responsivos para as colunas */
 .col-2 {
-    flex: 0 0 15%; /* Ajuste a largura das colunas */
+    flex: 0 0 15%; /* Ajuste para telas grandes */
 }
-
 h4 {
     margin-bottom: 30px;
 }
-.fundo {
-    width: 122px;
-    height: 110px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.5rem 1rem;
-
-    display: flex;
-    justify-content: center; /* Alinha a imagem horizontalmente */
-    align-items: center; /* Alinha a imagem verticalmente */
-}
-
-.imgtpflores {
-    width: 60px;
-    height: auto; /* Ajusta a altura proporcionalmente */
-}
-
 .fullscreen-opa {
-    position: relative; /* Para garantir que o pseudo-elemento fique atrás do conteúdo */
-    height: 400px;
-    width: 100%;
-    background-image: url(../img/imgfundo.jpg);
+    position: relative;
+    background: #e9ecef;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.9; /* Opacidade direta na imagem de fundo */
+    opacity: 0.9;
+    min-height: 250px; /* Aumentado para garantir que os elementos não sobreponham */
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 40px; /* Adicionado espaço inferior */
+}
+.tiposflores {
+    padding: 40px 15px; /* Reduzido nas laterais para melhor responsividade */
+    margin-bottom: 30px; /* Adicionado espaçamento extra */
+}
+
+.tiposflores .row {
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre as colunas */
+}
+.fundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 120px; /* Define um tamanho máximo */
+    height: 120px;
+}
+
+.imgtpflores {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.promo-section {
+    background-color: #e9ecef; /* Define o fundo */
+    padding: 40px 0; /* Adiciona espaçamento */
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -142,6 +194,31 @@ h4 {
     transform: translateY(-50%); /* Centraliza as setas verticalmente */
 }
 
+
+
+.card-img-top {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do card */
+    height: 200px; /* Define uma altura fixa para padronizar */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff; /* Ícone padrão cinza */
+    transition: color 0.3s;
+}
+
+.favorite-btn.active {
+    color: black; /* Ícone fica preto quando ativo */
+}
+
 .bg-image {
     height: 135px; /* Altura definida conforme solicitado */
     display: flex;
@@ -154,13 +231,14 @@ h4 {
     background-repeat: no-repeat;
 }
 
+
 /* Imagem de fundo para cada linha */
 .bg-1 {
     background-image: url('../img/imgfundo.jpg');
 }
 
 .bg-2 {
-    background-image: url('../img/imgfundo.jpg');
+    background-image: url('../img/fundo.jpg');
 }
 
 .bg-3 {
@@ -183,4 +261,164 @@ h4 {
 .bg-image .col {
     position: relative;
     z-index: 2;
+}
+
+
+/* quem somos */
+
+.quem-somos {
+    background: #f8f9fa;
+    padding: 60px 20px; /* Adaptação para telas menores */
+}
+
+.quem-somos img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto mais legível em telas pequenas */
+.quem-somos h3 {
+    color: #333;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.quem-somos p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos do Footer */
+.footer {
+    background-color: #661a2e;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer .list-unstyled {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer .list-unstyled li {
+    margin: 10px 0;
+}
+
+.footer .list-unstyled a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .list-unstyled a:hover {
+    color: #110d05; /* Cor de destaque no hover */
+}
+
+.footer .col-md-3 img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Celular */
+
+/* Navbar - Centraliza os itens de navegação */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px; /* Dá um espaço para o menu em dispositivos móveis */
+    }
+    .col-2 {
+        flex: 0 0 45%; /* Ajusta o tamanho das colunas para telas pequenas */
+    }
+    .carousel-inner .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap; /* Impede que os itens fiquem um abaixo do outro */
+        overflow: hidden;
+        justify-content: center; /* Centraliza o item */
+        
+    }
+
+    .carousel-inner .carousel-item .col-md-4 {
+        flex: 0 0 100%; /* Ocupa toda a largura no celular */
+        max-width: 100%;
+    }
+
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .fullscreen-bg {
+        height: 250px; /* Diminui a altura da imagem em telas pequenas */
+    }
+
+    .text-box {
+        margin-left: 0; /* Remove o deslocamento à esquerda */
+        max-width: 90%; /* Ajusta a largura da caixa de texto */
+    }
+    .bg-image {
+        height: 100px; /* Ajuste a altura das imagens de fundo */
+    }
+
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 767px) {
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer .col-md-3 {
+        margin-bottom: 30px;
+    }
+    .carousel-inner .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap; /* Impede que os itens fiquem um abaixo do outro */
+        overflow: hidden;
+        justify-content: center; /* Centraliza o item */
+    }
+
+    .carousel-inner .carousel-item .col-md-4 {
+        flex: 0 0 100%; /* Ocupa toda a largura no celular */
+        max-width: 100%;
+    }
+
+    .quem-somos {
+        padding: 40px 15px; /* Reduz espaço lateral */
+    }
+
+    .quem-somos h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .quem-somos p {
+        text-align: justify;
+        font-size: 0.95rem;
+    }
+
+    .quem-somos img {
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+}
+/* Ajustes específicos para telas menores */
+@media (max-width: 576px) {
+    .fullscreen-opa {
+        min-height: 300px; /* Maior altura para evitar cortes */
+        padding-bottom: 60px; /* Mais espaço na parte inferior */
+    }
+
+    .tiposflores {
+        padding: 20px 10px; /* Menos padding lateral */
+    }
+
+    .fundo {
+        max-width: 100px; /* Reduz tamanho das imagens no celular */
+        height: 100px;
+    }
 }
